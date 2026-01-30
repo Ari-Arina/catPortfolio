@@ -2,6 +2,8 @@
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
+const pageTitle = "The Cat Gallery";
+
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -17,7 +19,7 @@ import Layout from '../layouts/Layout.astro';
 
 			<link rel="icon" type="/apparent-aperture/src/assets/astro.svg" />
 
-			<title> The Cat Gallery </title>
+			<title> {pageTitle} </title>
 		</head>
 
 		<body>
@@ -30,7 +32,7 @@ import Layout from '../layouts/Layout.astro';
 			</nav>
 			
 
-			<h1> The Cat Gallery </h1>
+			<h1> {pageTitle} </h1>
 		</body>
 
 	</html>
