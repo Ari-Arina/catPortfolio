@@ -1,0 +1,13 @@
+---
+const platform = "github";
+const username = "Ari-Arina";
+const {social, user} = Astro.props;
+---
+
+<footer>
+    <hr>
+
+    <p>Learn more about my projects on <a href={`https://www.${platform}.com/${username}`}>{platform}</a></p>
+    <p>Connect with my socials!</p>
+        <a href={`https:www.${social}.com/${username}`}>{social}</a>
+</footer>

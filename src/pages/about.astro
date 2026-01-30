@@ -1,4 +1,7 @@
 ---
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
 import '../styles/global.css';
 
 const pageTitle = "About The Cat Gallery";
@@ -45,13 +48,7 @@ const textCase = "lowercase";
 		</head>
 
 		<body>
-            <nav>
-				<ul>
-					<li> <a href="/"> Home </a> </li>
-					<li> <a href="/about/"> About </a> </li>
-                    <li> <a href="/blog/"> Blog </a></li>
-				</ul>
-			</nav>
+            <Navigation />
 			
             
 
@@ -77,6 +74,7 @@ const textCase = "lowercase";
 			{finished && <p>I finished this tutorial!</p>}
 			{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 
+			<Footer />
 		</body>
 
 </html>
