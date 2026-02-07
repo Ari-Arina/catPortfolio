@@ -1,6 +1,6 @@
 ---
 
-const { author, title, briefNote, imgUrl } = Astro.props;
+const { author, title, work, briefNote, imgUrl } = Astro.props;
 ---
 
 <hr> 
@@ -10,8 +10,8 @@ const { author, title, briefNote, imgUrl } = Astro.props;
 
     <img src={ imgUrl } alt=`Photo of ${ author }` width=50%>
 
-    <p> A hard worker giving writing our blog posts, while behind the scenes destroying worlds.</p>
-    <p> A note from our author: <em>{ briefNote }</em> </p>
+    <p>{ work }</p>
+    <p> A note from { author }: <em>{ briefNote }</em> </p>
 
 </div>
-<hr>
+

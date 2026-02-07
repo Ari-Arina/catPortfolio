@@ -19,7 +19,7 @@ const goal = 3;
 
 const skillColor = "crimson";
 const fontWeight = "bold";
-const textCase = "lowercase";
+const textCase = "lowercase"; 
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -34,7 +34,7 @@ const textCase = "lowercase";
 			text-transform: var(--textCase);
 		}
 	</style>
-	<h2> About Author (not really) </h2>
+	<h2> About Author (not really) </h2> 
 	<p> Here are a few facts about me. </p>
 	<ul>
 		<li> My name is {identity.firstName}. </li>
@@ -53,8 +53,16 @@ const textCase = "lowercase";
 	{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 
 	<Author 
+		author="Ariana"
+		title="Main Author"
+		work="Followed Astro + catAPI tutorial to then customize this website! Made ideas for the website and coded them."
+		briefNote="It was amazing working on this!"
+		imgUrl="https://res.cloudinary.com/dspviyfw0/image/upload/v1770501973/image_umn5df.gif";
+	/>
+	<Author 
 		author="Larry" 
 		title="Co-Writer" 
+		work="A hard worker writing our blog posts, while behind the scenes destroying worlds."
 		briefNote="I will find you."
 		imgUrl="https://res.cloudinary.com/dspviyfw0/image/upload/v1770500718/image_mvwd3t.png"	
 	/>
