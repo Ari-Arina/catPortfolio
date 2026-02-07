@@ -8,4 +8,16 @@ const pageTitle = "The Cat Gallery";
 <BaseLayout pageTitle={pageTitle}>
 	<h2>My amazing blog subtitle</h2>
 	<Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
+	<img id="catapi_image_elem" width = 50% >
 </BaseLayout>
+
+<script>
+document.addEventListener('DOMContentLoaded', setRandomCatImage);
+async function setRandomCatImage() {
+	const catapi_call = await fetch('https://api.thecatapi.com/v1/images/search');
+	const catapi_json = await catapi_call.json();
+	const img_url = catapi_json[0].url;
+	const image_elem = document.getElementById('catapi_image_elem');
+	image_elem.src = img_url;
+}
+</script>
