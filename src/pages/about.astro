@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Author from '../components/Author.astro';
 
 const pageTitle = "About The Cat Gallery";
 
@@ -50,4 +51,11 @@ const textCase = "lowercase";
 	{happy && <p>I am happy to be learning Astro!</p>}
 	{finished && <p>I finished this tutorial!</p>}
 	{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+
+	<Author 
+		author="Larry" 
+		title="Co-Writer" 
+		briefNote="I will find you."
+		imgUrl="https://res.cloudinary.com/dspviyfw0/image/upload/v1770500718/image_mvwd3t.png"	
+	/>
 </BaseLayout>

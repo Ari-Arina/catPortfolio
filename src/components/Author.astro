@@ -1,11 +1,17 @@
 ---
 
-const { authorTitle, briefNote } = Astro.params;
+const { author, title, briefNote, imgUrl } = Astro.props;
 ---
 
+<hr> 
 <div>
-    <h2>{authorTitle}</h2>
-    <p> A hard worker giving writing our blog posts and behind the scenes </p>
+    <h2>{ author }</h2>
+    <h3>{ title }</h3>
+
+    <img src={ imgUrl } alt=`Photo of ${ author }` width=50%>
+
+    <p> A hard worker giving writing our blog posts, while behind the scenes destroying worlds.</p>
     <p> A note from our author: <em>{ briefNote }</em> </p>
 
 </div>
+<hr>
