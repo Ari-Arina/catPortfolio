@@ -24,10 +24,16 @@ h1 {
 .menu {
     background-color: #0d0950;
     border: none;
+    border-radius: 10px;
     color: #fff;
     font-size: 1.2rem;
     font-weight: bold;
     padding: 5px 10px;
+}
+
+.menu:hover,
+.menu:hover {
+  background-color: #ff9776;
 }
 
 .nav-links {
@@ -84,6 +90,10 @@ html.dark {
 .dark .menu {
   background-color: #fff;
   color: #000;
+}
+
+.dark .menu:hover {
+  background-color: #ff9776;
 }
 
 .dark .nav-links a:hover,
