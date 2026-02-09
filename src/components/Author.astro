@@ -1,12 +1,12 @@
 ---
 
-const { author, title, work, briefNote, imgUrl, side } = Astro.props;
+const { author, title, work, briefNote, imgUrl } = Astro.props;
 ---
 
 <hr> 
 <div class="author">
     <h2>{ author }</h2>
-    <h3>{ title }</h3>
+    <h3>{ title }</h3>   
 
     <img src={ imgUrl } alt=`Photo of ${ author }` width=50%>
 
@@ -15,7 +15,7 @@ const { author, title, work, briefNote, imgUrl, side } = Astro.props;
 
 </div>
 
-<style>
+<style> 
     .author {
         display: flex;
         justify-content: center;
@@ -36,19 +36,21 @@ const { author, title, work, briefNote, imgUrl, side } = Astro.props;
     @media screen and (min-width: 636px) {
         .author {
             display: flex;
-            justify-content: center;
-            text-align: center;
-            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            text-align: right;
         }
-
-        h2, h3 {
-            margin-bottom: 0.1rem;
-            margin-top: 0.2rem;
-        }
-
+  
         img {
-            border-radius: 0.5rem;
+            border-radius: 0.5rem; 
+            flex: 1;
         }
+
+        .name {
+            margin-bottom: 0.5rem;
+            margin-top: 0.7rem; 
+            flex: 2;
+        } 
     }
 </style>
 
