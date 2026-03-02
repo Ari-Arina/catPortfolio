@@ -4,14 +4,19 @@ const { author, title, work, briefNote, imgUrl } = Astro.props;
 ---
 
 <hr> 
+
 <div class="author">
-    <h2>{ author }</h2>
-    <h3>{ title }</h3>   
+    <div class="author-page">
+        <img src={ imgUrl } alt=`Photo of ${ author }` width=50%>
+    </div>
 
-    <img src={ imgUrl } alt=`Photo of ${ author }` width=50%>
+    <div class="author-description">
+        <h2>{ author }</h2>
+        <h3>{ title }</h3>   
 
-    <p>{ work }</p>
-    <p> A note from { author }: <em>{ briefNote }</em> </p>
+        <p>{ work }</p>
+        <p> A note from { author }: <em>{ briefNote }</em> </p>
+    </div>     
 
 </div>
 
@@ -36,21 +41,8 @@ const { author, title, work, briefNote, imgUrl } = Astro.props;
     @media screen and (min-width: 636px) {
         .author {
             display: flex;
-            justify-content: right;
-            align-items: center;
-            text-align: right;
+            
         }
-  
-        img {
-            border-radius: 0.5rem; 
-            flex: 1;
-        }
-
-        .name {
-            margin-bottom: 0.5rem;
-            margin-top: 0.7rem; 
-            flex: 2;
-        } 
     }
 </style>
 
