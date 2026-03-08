@@ -1,5 +1,15 @@
+:root {
+  --light-color: #FDFBF5;
+  --hover-color: #6A7E13;
+  --links-color: #F382A2;
+  --links-alt-color: #FFD0DE;
+  --light-atl-color: #FEE7E2;
+  --heading-color: #B2805F;
+  --dark-color: #464543;
+}
+
 html {
-    background-color: #f1f5f9;
+    background-color: var(--light-color);
     font-family: sans-serif;
 }
 
@@ -16,28 +26,63 @@ body {
 }
 
 h1 {
+    color: var(--heading-color);
     margin: 1rem 0;
     font-size: 2.5rem;
+    text-align: center;
+}
+
+h2, h3, p {
+  color: var(--heading-color);
+  text-align: center;
+}
+
+a {
+  color: var(--links-color);
 }
 
 img {
   margin: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 } 
 
+button {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  text-transform: bold;
+  color: var(--links-color);
+  border: none;
+  border-radius: .5em;
+  padding: .5em 1em;
+  font-size: 1.15em;
+  background-color: var(--light-atl-color);
+  margin: auto;
+}
+
 /* -- Navigation Bar -- */
+nav {
+    background-color: #FEE7E2;
+    border: 5px solid #FEE7E2;
+}
+
 .menu {
-    background-color: #0d0950;
+    background-color: var(--links-color);
     border: none;
     border-radius: 10px;
-    color: #fff;
+    color: var(--light-color);
     font-size: 1.2rem;
     font-weight: bold;
     padding: 5px 10px;
+    margin: 0;
 }
 
 .menu:hover,
 .menu:hover {
-  background-color: #ff9776;
+  background-color: var(--hover-color);
+  color: var(--links-alt-color);
 }
 
 .nav-links {
@@ -54,31 +99,20 @@ img {
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: #0d0950;
+  color: var(--links-color);
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #ff9776;
+  background-color: var(--hover-color);
+  color: var(--links-alt-color);
 }
 
 :has(.menu[aria-expanded="true"]) .nav-links {
     display: unset;
 }
 
-button {
-  display: block;
-  text-align: center;
-  font-weight: bold;
-  text-transform: bold;
-  color: #0d0950;
-  border: solid 1px #edadfa;
-  border-radius: .5em;
-  padding: .5em 1em;
-  font-size: 1.15em;
-  background-color: #f9ecfc;
-}
-
+/* -- Laptop Design -- */
 @media screen and (min-width: 636px) {
   .nav-links {
     margin-left: 5em;
