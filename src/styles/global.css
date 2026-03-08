@@ -32,13 +32,21 @@ h1 {
     text-align: center;
 }
 
-h2, h3, p {
+h2, h3 {
   color: var(--heading-color);
   text-align: center;
 }
 
+p {
+  color: var(--dark-color);
+}
+
 a {
   color: var(--links-color);
+}
+
+a:hover {
+  color: var(--hover-color);
 }
 
 img {
@@ -60,6 +68,11 @@ button {
   font-size: 1.15em;
   background-color: var(--light-atl-color);
   margin: auto;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+  color: var(--links-alt-color);
 }
 
 /* -- Navigation Bar -- */

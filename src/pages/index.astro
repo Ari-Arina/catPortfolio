@@ -1,14 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Greeting from '../components/Greetting';
+import Greeting from '../components/Motivation';
 
 const pageTitle = "The Cat Gallery";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<h2>My amazing webpage</h2>
-	<Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
 	<img id="catapi_image_elem" width = 50% >
+	<Greeting client:load messages={["You are purrfect", "You can do it", "Meow or never, lock in", "Very claw-ver of you"]} />
 	<p> This website was created to see some cute cats and make you smile :) </p>
 	<p> In the Cat Gallery you can also read posts written by the amazing Larry. </p> 
 </BaseLayout>
