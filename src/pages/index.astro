@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Motivation';
 
 const api_key = import.meta.env.API_KEY;
-const catapi_raw_data = await fetch(`https://api.thecatapi.com/v1/images/search?limit=4&breed_ids=beng&api_key=${api_key}`);
+const catapi_raw_data = await fetch(`https://api.thecatapi.com/v1/images/search?limit=4&api_key=${api_key}`);
 const catapi_json = await catapi_raw_data.json();
 
 const pageTitle = "The Cat Gallery";
@@ -11,24 +11,16 @@ const pageTitle = "The Cat Gallery";
 
 <BaseLayout pageTitle={pageTitle}>
 	<h2>My amazing webpage</h2>
-	<img id="catapi_image_elem" width = 50% > 
-	<img src={catapi_json[2].url} width=50% >
+	<div class="cat-collage">
+		<img src={catapi_json[0].url} >
+		<img src={catapi_json[1].url} >
+		<img src={catapi_json[2].url} >
+		<img src={catapi_json[3].url} >
+	</div>
 	<Greeting client:load messages={["You are purrfect", "You can do it", "Meow or never, lock in", "Very claw-ver of you"]} />
 	<p> This website was created to see some cute cats and make you smile :) </p>
 	<p> In the Cat Gallery you can also read posts written by the amazing Larry. </p> 
 </BaseLayout>
-
-<script>
-	// not using an API key
-document.addEventListener('DOMContentLoaded', setRandomCatImage);
-async function setRandomCatImage() {
-	const catapi_call = await fetch('https://api.thecatapi.com/v1/images/search');
-	const catapi_json = await catapi_call.json();
-	const img_url = catapi_json[0].url; 
-	const image_elem = document.getElementById('catapi_image_elem');
-	image_elem.src = img_url;
-}
-</script>
 
 <style>
 	button {
@@ -38,5 +30,16 @@ async function setRandomCatImage() {
 		padding: 10px 0;
 		font-size: 1.2rem;
 		text-transform: uppercase;
+	}
+
+	.cat-collage {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	img {
+		width: 50%;
+		border-radius: 10px;
+		object-fit: contain;
 	}
 </style>
