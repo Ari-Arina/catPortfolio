@@ -16,10 +16,10 @@ Another challenge was the API. However, the guides made it super easy to underst
 
 But other than my experience! I wanted to share the various resources I found that might be helpful - whether about catAPI, Astro, or even HTML and CSS. So, here they are!
 
-- Styling: [CSS Flexbox Layout Guide] (https://css-tricks.com/snippets/css/a-guide-to-flexbox/) by Chris Coyier.
-- Astro: [Build your first Astro Blog] (https://docs.astro.build/en/tutorial/0-introduction/) by Astro Docs.
-- CatAPI: [Call your first API!] (https://108charlotte.github.io/APIs-Guide-Website/) by Sleepover and [TheCatAPI - Documentation Portal] (https://developers.thecatapi.com/view-account/ylX4blBYT9FaoVd6OhvR?report=bOoHBz-8t) by The Cat API.
-- Post Formatting: [Markdown formatting guide] (https://www.range.co/help/article/markdown-formatting-guide) by Range.
+- Styling: [CSS Flexbox Layout Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) by Chris Coyier.
+- Astro: [Build your first Astro Blog](https://docs.astro.build/en/tutorial/0-introduction/) by Astro Docs.
+- CatAPI: [Call your first API!](https://108charlotte.github.io/APIs-Guide-Website/) by Sleepover and [TheCatAPI - Documentation Portal](https://developers.thecatapi.com/view-account/ylX4blBYT9FaoVd6OhvR?report=bOoHBz-8t) by The Cat API.
+- Post Formatting: [Markdown formatting guide](https://www.range.co/help/article/markdown-formatting-guide) by Range.
 
 _All of these articles are **not** mine, but I found them useful while creating this simple website_
 
