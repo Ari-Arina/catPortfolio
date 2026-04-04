@@ -11,14 +11,24 @@ const pageTitle = "The Cat Gallery";
 
 <BaseLayout pageTitle={pageTitle}>
 	<h2>My amazing webpage</h2>
-	<div class="cat-collage">
-		<img src={catapi_json[0].url} >
-		<img src={catapi_json[1].url} >
-		<img src={catapi_json[2].url} >
-		<img src={catapi_json[3].url} >
+
+	<div class="cat-collage-wrapper">
+		<div class="cat-collage-tracker">
+			<img src={catapi_json[0].url} >
+			<img src={catapi_json[1].url} >
+			<img src={catapi_json[2].url} >
+			<img src={catapi_json[3].url} >
+			<img src={catapi_json[0].url} >
+			<img src={catapi_json[1].url} >
+			<img src={catapi_json[2].url} >
+			<img src={catapi_json[3].url} >
+		</div>
 	</div>
-	<Greeting client:load messages={["You are purrfect", "You can do it", "Meow or never, lock in", "Very claw-ver of you"]} />
+
+	<Greeting client:load messages={["You are purrfect", "You can do it", "Meow or never, lock in", "You are very claw-ver"]} />
+
 	<p> This website was created to see some cute cats and make you smile :) </p>
+
 	<p> In the Cat Gallery you can also read posts written by the amazing Larry. </p> 
 </BaseLayout>
 
@@ -32,14 +42,26 @@ const pageTitle = "The Cat Gallery";
 		text-transform: uppercase;
 	}
 
-	.cat-collage {
+	/* -- Cat Collage Marquee Effect -- */
+	.cat-collage-wrapper {
+		overflow: hidden; 
+	}
+
+	.cat-collage-tracker {
 		display: flex;
-		flex-wrap: wrap;
+		width: max-content;
+		animation: scroll 10s linear infinite;
 	}
 
 	img {
-		width: 50%;
+		width: 200px;
+		margin: 0 10px 0 10px;
 		border-radius: 10px;
-		object-fit: contain;
+		object-fit: contain; 
+	}
+
+	@keyframes scroll {
+		from { transform: translateX(0); }
+		to { transform: translateX(-50%); }
 	}
 </style>
