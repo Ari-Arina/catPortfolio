@@ -49,3 +49,4 @@ Now, a function needs to be called for the scroll. You need to define what 'scro
 ```
 
 Now, if you followed the steps and this CSS code, you should have the Marquee Effect!
+

@@ -1,11 +1,11 @@
 ---
 
-const { author, title, work, briefNote, imgUrl } = Astro.props;
+const { author, title, work, briefNote, imgUrl, index } = Astro.props;
 ---
 
 <hr> 
 
-<div class="author">
+<div class={`author $index % 2 === 0 ? "reverse" : ""}`}>
     <div class="author-image">
         <img src={ imgUrl } alt=`Photo of ${ author }` width=50%>
     </div>
